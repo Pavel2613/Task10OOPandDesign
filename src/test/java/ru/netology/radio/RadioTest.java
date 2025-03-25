@@ -137,7 +137,8 @@ public class RadioTest {
     public void nextRadio() {
         Radio radio = new Radio();
 
-        radio.radioStationNumber = 9;
+        radio.radioStationNumber = 8;
+        radio.nextRadio();
         radio.nextRadio();
 
         int expected = 0;
@@ -153,8 +154,9 @@ public class RadioTest {
 
         radio.radioStationNumber = 0;
         radio.prevRadio();
+        radio.prevRadio();
 
-        int expected = 9;
+        int expected = 8;
         int actual = radio.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
