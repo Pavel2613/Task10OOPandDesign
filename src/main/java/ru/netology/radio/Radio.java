@@ -1,8 +1,8 @@
 package ru.netology.radio;
 
 public class Radio {
-    public int volumeLevel; // текущий уровень громкости
-    public int radioStationNumber; // текущий номер радиостанции
+    private int volumeLevel; // текущий уровень громкости
+    private int radioStationNumber; // текущий номер радиостанции
 
     public int getVolumeLevel() { // геттер для уровня громкости
         return volumeLevel;

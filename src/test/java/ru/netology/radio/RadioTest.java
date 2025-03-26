@@ -55,7 +55,7 @@ public class RadioTest {
     public void increaseVolume() {
         Radio radio = new Radio();
 
-        radio.volumeLevel = 99;
+        radio.setVolumeLevel (99);
         radio.increaseVolume();
 
         int expected = 100;
@@ -73,7 +73,7 @@ public class RadioTest {
     public void decreaseVolume() {
         Radio radio = new Radio();
 
-        radio.volumeLevel = 1;
+        radio.setVolumeLevel(1);
         radio.decreaseVolume();
 
         int expected = 0;
@@ -137,7 +137,7 @@ public class RadioTest {
     public void nextRadio() {
         Radio radio = new Radio();
 
-        radio.radioStationNumber = 8;
+        radio.setRadioStationNumber(8);
         radio.nextRadio();
         radio.nextRadio();
 
@@ -152,7 +152,7 @@ public class RadioTest {
     public void prevRadio() {
         Radio radio = new Radio();
 
-        radio.radioStationNumber = 0;
+        radio.setRadioStationNumber(0);
         radio.prevRadio();
         radio.prevRadio();
 
