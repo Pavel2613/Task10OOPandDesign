@@ -148,7 +148,7 @@ public class RadioTest {
 
     }
 
-    @Test // если значение 9 и нажать кнопку "next", то значение меняется на 0
+    @Test // если значение 0 и нажать кнопку "prev", то переходим на значение 9
     public void prevRadio() {
         Radio radio = new Radio();
 

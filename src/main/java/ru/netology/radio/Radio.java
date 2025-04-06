@@ -3,6 +3,16 @@ package ru.netology.radio;
 public class Radio {
     private int volumeLevel; // текущий уровень громкости
     private int radioStationNumber; // текущий номер радиостанции
+    private int maxStationsCount; // максимальное количество радиостанций
+
+    public Radio() {
+        this.maxStationsCount = 9; // установка максимального количества радиостанций, 10 шт.
+    }
+
+    public Radio(int stationsCount) {
+        this.maxStationsCount = stationsCount;
+
+    }
 
     public int getVolumeLevel() { // геттер для уровня громкости
         return volumeLevel;
@@ -39,21 +49,21 @@ public class Radio {
     }
 
     public void limitMaxRadioStation() { // максимальное кол-во выбора радиостанций
-        radioStationNumber = 9;
+        radioStationNumber = maxStationsCount;
     }
 
     public void setRadioStationNumber(int newRadioStationNumber) { // диапазон выбора номера радиостанции от 0 до 9
         if (newRadioStationNumber < 0) {
-            radioStationNumber = 9;
+            radioStationNumber = maxStationsCount;
         }
-        if (newRadioStationNumber > 9) {
+        if (newRadioStationNumber > maxStationsCount) {
             radioStationNumber = 0;
         }
         radioStationNumber = newRadioStationNumber;
     }
 
     public void nextRadio() { // сменить радиостанцию кнопкой "next"
-        if (radioStationNumber == 9) {
+        if (radioStationNumber == maxStationsCount) {
             radioStationNumber = 0; // если значение 9 и нажать кнопку "next", то переходим на значение 0
         } else {
             radioStationNumber = radioStationNumber + 1;
@@ -62,7 +72,7 @@ public class Radio {
 
     public void prevRadio() { // сменить радиостанцию кнопкой "prev"
         if (radioStationNumber == 0) {
-            radioStationNumber = 9; // если значение 0 и нажать кнопку "prev", то переходим на значение 9
+            radioStationNumber = maxStationsCount; // если значение 0 и нажать кнопку "prev", то переходим на значение 9
         } else {
             radioStationNumber = radioStationNumber - 1;
         }
