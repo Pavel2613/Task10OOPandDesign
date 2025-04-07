@@ -6,11 +6,11 @@ public class Radio {
     private int maxStationsCount; // максимальное количество радиостанций
 
     public Radio() {
-        this.maxStationsCount = 9; // установка максимального количества радиостанций, 10 шт.
+        this.maxStationsCount = 9; // установка максимального количества радиостанций, 10 шт. (от 0 до 9)
     }
 
     public Radio(int stationsCount) {
-        this.maxStationsCount = stationsCount;
+        this.maxStationsCount = stationsCount - 1;
 
     }
 
