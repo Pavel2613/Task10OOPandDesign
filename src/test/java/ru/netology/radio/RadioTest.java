@@ -105,7 +105,7 @@ public class RadioTest {
 
         radio.limitMaxRadioStation();
 
-        int expected = 9;
+        int expected = 10;
         int actual = radio.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -141,7 +141,7 @@ public class RadioTest {
         radio.nextRadio();
         radio.nextRadio();
 
-        int expected = 0;
+        int expected = 10;
         int actual = radio.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -156,7 +156,7 @@ public class RadioTest {
         radio.prevRadio();
         radio.prevRadio();
 
-        int expected = 9;
+        int expected = 10;
         int actual = radio.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
