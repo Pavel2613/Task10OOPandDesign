@@ -10,7 +10,7 @@ public class Radio {
     }
 
     public Radio(int stationsCount) {
-        this.maxStationsCount = stationsCount;
+        this.maxStationsCount = stationsCount - 1;
 
     }
 
@@ -52,14 +52,14 @@ public class Radio {
         radioStationNumber = maxStationsCount;
     }
 
-    public void setRadioStationNumber(int newRadioStationNumber) { // диапазон выбора номера радиостанции от 0 до 9
-        if (newRadioStationNumber < 0) {
-            radioStationNumber = maxStationsCount;
+    public void setRadioStationNumber(int RadioStationNumber) { // диапазон выбора номера радиостанции от 0 до 9
+        if (RadioStationNumber < 0) {
+            return;
         }
-        if (newRadioStationNumber > maxStationsCount) {
-            radioStationNumber = 0;
+        if (RadioStationNumber > maxStationsCount) {
+            return;
         }
-        radioStationNumber = newRadioStationNumber;
+        this.radioStationNumber = RadioStationNumber;
     }
 
     public void nextRadio() { // сменить радиостанцию кнопкой "next"
